@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "762658784136",
+    "project_id": "delivery-app-bca0a",
+    "storage_bucket": "delivery-app-bca0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762658784136:android:81c31656108830f479f03d",
+        "android_client_info": {
+          "package_name": "com.example.catchy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762658784136-l6ek92q4fnrvmi66mf9024vua5qlgkmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4aGD0yxwnci6p7Q9w2NeITV6OKbjKdUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762658784136-l6ek92q4fnrvmi66mf9024vua5qlgkmh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
