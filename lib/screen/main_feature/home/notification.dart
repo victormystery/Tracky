@@ -77,12 +77,10 @@ class _NotifyState extends State<Notify> {
               ],
             ),
             const SizedBox(height: 10),
-            Container(
-              child: Column(
+            Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Container(
-                    child: Row(
+                  Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
@@ -95,10 +93,10 @@ class _NotifyState extends State<Notify> {
                             color: Colors.white,
                           ),
                         ),
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Kathryn sent you a message ",
                               textAlign: TextAlign.justify,
@@ -110,11 +108,10 @@ class _NotifyState extends State<Notify> {
                         Text(DateFormat.jm().format(DateTime.now()).toString()),
                       ],
                     ),
-                  ),
+                  
                   const Divider(),
                   const SizedBox(height: 20),
-                  Container(
-                    child: Row(
+                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
@@ -127,10 +124,10 @@ class _NotifyState extends State<Notify> {
                             color: Colors.white,
                           ),
                         ),
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Your Order is Ready for Delivery",
                               textAlign: TextAlign.center,
@@ -142,11 +139,10 @@ class _NotifyState extends State<Notify> {
                         Text(DateFormat.jm().format(DateTime.now()).toString()),
                       ],
                     ),
-                  ),
+                  
                   const Divider(),
                   const SizedBox(height: 20),
-                  Container(
-                    child: Row(
+                 Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
@@ -159,10 +155,10 @@ class _NotifyState extends State<Notify> {
                             color: Colors.white,
                           ),
                         ),
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Try out our Latest Service from Tracky",
                               textAlign: TextAlign.center,
@@ -174,11 +170,10 @@ class _NotifyState extends State<Notify> {
                         Text(DateFormat.jm().format(DateTime.now()).toString()),
                       ],
                     ),
-                  ),
+                  
                   const Divider(),
                   const SizedBox(height: 20),
-                  Container(
-                    child: Row(
+                  Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
@@ -191,10 +186,10 @@ class _NotifyState extends State<Notify> {
                             color: Colors.white,
                           ),
                         ),
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Get 20% Discount for First Transaction",
                               textAlign: TextAlign.center,
@@ -206,12 +201,12 @@ class _NotifyState extends State<Notify> {
                         Text(DateFormat.jm().format(DateTime.now()).toString()),
                       ],
                     ),
-                  ),
+                  
                   const Divider(),
                   const SizedBox(height: 20),
                 ],
               ),
-            )
+            
           ],
         ),
       ),

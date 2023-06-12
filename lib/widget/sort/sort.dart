@@ -1,6 +1,8 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors
+
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+
 
 class Sort extends StatefulWidget {
   const Sort({super.key});
@@ -12,7 +14,7 @@ class Sort extends StatefulWidget {
 class _SortState extends State<Sort> {
   @override
   Widget build(BuildContext context) {
-    bool _customIcon = false;
+    bool customIcon = false;
     return Material(
       child: Padding(
         padding: const EdgeInsets.only(
@@ -61,7 +63,7 @@ class _SortState extends State<Sort> {
                 child: Column(
                   children: [
                     ExpansionTile(
-                      title: Text(
+                      title: const Text(
                         "Method",
                         style: TextStyle(
                           fontSize: 16,
@@ -70,33 +72,33 @@ class _SortState extends State<Sort> {
                       ),
                       children: [
                         ListTile(
-                          title: Text("Send"),
+                          title: const Text("Send"),
                           trailing: InkWell(
                               onTap: () {
                                 setState(() {
-                                  _customIcon = !_customIcon;
+                                  customIcon = !customIcon;
                                 });
                               },
-                              child: Icon(_customIcon == true
+                              child: Icon(customIcon == true
                                   ? Icons.radio_button_off
                                   : Icons.radio_button_checked)),
                         ),
                         ListTile(
-                          title: Text("Recieve"),
+                          title: const Text("Recieve"),
                           trailing: InkWell(
                               onTap: () {
                                 setState(() {
-                                  _customIcon = !_customIcon;
+                                  customIcon = !customIcon;
                                 });
                               },
-                              child: Icon(_customIcon == false
+                              child: Icon(customIcon == false
                                   ? Icons.radio_button_off
                                   : Icons.radio_button_checked)),
                         ),
                       ],
                     ),
-                    SizedBox(height: 20),
-                    ExpansionTile(
+                    const SizedBox(height: 20),
+                    const ExpansionTile(
                       title: Text(
                         "Status",
                         style: TextStyle(

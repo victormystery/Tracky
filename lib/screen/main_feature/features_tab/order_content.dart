@@ -1,3 +1,5 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors, unused_local_variable
+
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
@@ -44,9 +46,9 @@ class _OrderContentState extends State<OrderContent> {
               ],
             ),
             const SizedBox(height: 30),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Padding(
                   padding: EdgeInsets.fromLTRB(10, 0, 10, 5),
                   child: Text(
@@ -64,108 +66,47 @@ class _OrderContentState extends State<OrderContent> {
               ],
             ),
             const SizedBox(height: 5),
-            Row(
-              children: [
-                Container(
-                  width: 227,
-                  height: 52,
-                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: const BorderSide(color: Colors.black26),
+            FittedBox(
+              child: Row(
+                children: [
+                  Container(
+                    width: 227,
+                    height: 52,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(color: Colors.black26),
+                        ),
+                        hintText: "Enter Package Type",
+                        prefixIcon: const Icon(
+                            CommunityMaterialIcons.package_variant_closed),
                       ),
-                      hintText: "Enter Package Type",
-                      prefixIcon:
-                          const Icon(CommunityMaterialIcons.package_variant_closed),
+                      keyboardType: TextInputType.text,
                     ),
-                    keyboardType: TextInputType.text,
                   ),
-                ),
-                const SizedBox(width: 15),
-                Container(
-                  width: 100,
-                  height: 52,
-                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: "0",
-                      suffixText: "Kg",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: const BorderSide(color: Colors.black26),
+                  const SizedBox(width: 15),
+                  Container(
+                    width: 100,
+                    height: 52,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: "0",
+                        suffixText: "Kg",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: const BorderSide(color: Colors.black26),
+                        ),
                       ),
+                      keyboardType: TextInputType.number,
                     ),
-                    keyboardType: TextInputType.number,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(height: 20),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Dimension",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      width: 110,
-                      height: 52,
-                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: "Length",
-                          suffixText: "cm",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.black26),
-                          ),
-                        ),
-                        keyboardType: TextInputType.number,
-                      ),
-                    ),
-                    Container(
-                      width: 110,
-                      height: 52,
-                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: "Width",
-                          suffixText: "cm",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.black26),
-                          ),
-                        ),
-                        keyboardType: TextInputType.number,
-                      ),
-                    ),
-                    Container(
-                      width: 110,
-                      height: 52,
-                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: "Height",
-                          suffixText: "cm",
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.black26),
-                          ),
-                        ),
-                        keyboardType: TextInputType.number,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            const SizedBox(height: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -218,10 +159,10 @@ class _OrderContentState extends State<OrderContent> {
                                         ),
                                       ),
                                       const SizedBox(width: 20),
-                                      Column(
+                                      const Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
-                                        children: const [
+                                        children: [
                                           Text("Regular"),
                                           SizedBox(height: 5),
                                           Text("5-7 days"),
@@ -262,10 +203,10 @@ class _OrderContentState extends State<OrderContent> {
                                         ),
                                       ),
                                       const SizedBox(width: 20),
-                                      Column(
+                                      const Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
-                                        children: const [
+                                        children: [
                                           Text("Cargo"),
                                           SizedBox(height: 5),
                                           Text("3-4 days"),
@@ -306,10 +247,10 @@ class _OrderContentState extends State<OrderContent> {
                                         ),
                                       ),
                                       const SizedBox(width: 20),
-                                      Column(
+                                      const Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
-                                        children: const [
+                                        children: [
                                           Text("Exprees"),
                                           SizedBox(height: 5),
                                           Text("1-2 days"),
@@ -334,17 +275,17 @@ class _OrderContentState extends State<OrderContent> {
                       border: Border.all(color: Colors.black12),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
-                          children: const [
+                          children: [
                             Icon(Iconsax.note_1),
                             SizedBox(width: 10),
                             Text("Select Services"),
                           ],
                         ),
-                        const Icon(Icons.arrow_drop_down)
+                        Icon(Icons.arrow_drop_down)
                       ],
                     ),
                   ),
@@ -375,16 +316,16 @@ class _OrderContentState extends State<OrderContent> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Row(
+                                const Row(
                                   children: [
-                                    const Icon(Iconsax.coin),
-                                    const SizedBox(width: 15),
+                                    Icon(Iconsax.coin),
+                                    SizedBox(width: 15),
                                     Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
-                                      children: const [
+                                      children: [
                                         Text("Tracky Balance"),
                                         SizedBox(height: 5),
                                         Text("\$${4567}"),
@@ -418,12 +359,12 @@ class _OrderContentState extends State<OrderContent> {
                                   children: [
                                     Image.asset("images/Mastercard Icon.png"),
                                     const SizedBox(width: 15),
-                                    Column(
+                                    const Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
-                                      children: const [
+                                      children: [
                                         Text("Mastercard"),
                                         SizedBox(height: 5),
                                         Text("6789 0987 1234 **** "),

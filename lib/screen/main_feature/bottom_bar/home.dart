@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../helper/services/auth_service.dart';
+
 import '../home/home_screen.dart';
 
 import 'order.dart';
@@ -17,21 +19,32 @@ class _HomeState extends State<Home> {
   late List<Map<String, Object>> _pages;
   int _selectedPageIndex = 0;
 
+  String userName = "";
+  String email = "";
+  String phone = "";
+  AuthService authService = AuthService();
+
+  String groupName = "";
   @override
   void initState() {
     super.initState();
+
     _pages = [
       {
         'page': const HomeScreen(),
-        'title': 'Sell Art',
+        'title': 'Home',
       },
       {
         'page': const OrderScreen(),
-        'title': 'Sell Art',
+        'title': 'Order',
       },
       {
-        'page': const Profile(),
-        'title': 'Sell Art',
+        'page': Profile(
+          email: email,
+          username: userName,
+          phone: phone,
+        ),
+        'title': 'Profile',
       },
     ];
   }
@@ -42,6 +55,16 @@ class _HomeState extends State<Home> {
     });
   }
 
+  //String Manipulation
+  String getId(String res) {
+    return res.substring(0, res.indexOf("_"));
+  }
+
+  String getName(String res) {
+    return res.substring(res.indexOf("_") + 1);
+  }
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

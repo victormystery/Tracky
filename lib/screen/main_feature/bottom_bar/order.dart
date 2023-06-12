@@ -1,3 +1,5 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors
+
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
@@ -15,9 +17,7 @@ class _OrderScreenState extends State<OrderScreen> {
   @override
   Widget build(BuildContext context) {
     return Material(
-
       child: Column(
-        
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
@@ -156,7 +156,7 @@ class _OrderScreenState extends State<OrderScreen> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Container(
                         margin: const EdgeInsets.fromLTRB(15, 0, 10, 0),
                         padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
@@ -212,7 +212,7 @@ class _OrderScreenState extends State<OrderScreen> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Container(
                         margin: const EdgeInsets.fromLTRB(15, 0, 10, 0),
                         padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
@@ -268,7 +268,7 @@ class _OrderScreenState extends State<OrderScreen> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                     ],
                   ),
                 ),

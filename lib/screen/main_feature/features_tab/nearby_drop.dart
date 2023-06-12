@@ -46,108 +46,99 @@ class _NearDropState extends State<NearDrop> {
                 child: Image.asset("images/Artboard mask.png"),
               ),
               const SizedBox(height: 20),
-              Container(
-                child: Column(
-                  children: [
-                    TextField(
-                      cursorColor: Colors.black,
-                      decoration: InputDecoration(
-                          fillColor: Colors.grey[250],
-                          filled: true,
-                          prefixIcon: const Icon(
-                            Icons.search,
-                            color: Colors.grey,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
-                              borderSide:
-                                  const BorderSide(color: Colors.transparent)),
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
-                              borderSide:
-                                  const BorderSide(color: Colors.transparent)),
-                          hintText: "Search Location"),
-                      keyboardType: TextInputType.text,
-                    ),
-                    const SizedBox(height: 30),
-                    Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Column(
+                children: [
+                  TextField(
+                    cursorColor: Colors.black,
+                    decoration: InputDecoration(
+                        fillColor: Colors.grey[250],
+                        filled: true,
+                        prefixIcon: const Icon(
+                          Icons.search,
+                          color: Colors.grey,
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide:
+                                const BorderSide(color: Colors.transparent)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide:
+                                const BorderSide(color: Colors.transparent)),
+                        hintText: "Search Location"),
+                    keyboardType: TextInputType.text,
+                  ),
+                  const SizedBox(height: 30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Icon(Icons.location_on_rounded),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Icon(Icons.location_on_rounded),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text("New Montogomery"),
-                              Text("4517 Washington Ave. Manchester..."),
-                            ],
-                          ),
-                          Text(
-                            DateFormat.jm().format(DateTime.now()).toString(),
-                          ),
+                          Text("New Montogomery"),
+                          Text("4517 Washington Ave. Manchester..."),
                         ],
                       ),
-                    ),
-                    const SizedBox(height: 30),
-                    Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      Text(
+                        DateFormat.jm().format(DateTime.now()).toString(),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Icon(Icons.location_on_rounded),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Icon(Icons.location_on_rounded),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text("New Montogomery"),
-                              Text("4517 Washington Ave. Manchester..."),
-                            ],
-                          ),
-                          Text(
-                            DateFormat.jm().format(DateTime.now()).toString(),
-                          ),
+                          Text("New Montogomery"),
+                          Text("4517 Washington Ave. Manchester..."),
                         ],
                       ),
-                    ),
-                    const SizedBox(height: 30),
-                    Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      Text(
+                        DateFormat.jm().format(DateTime.now()).toString(),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Icon(Icons.location_on_rounded),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Icon(Icons.location_on_rounded),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text("New Montogomery"),
-                              Text("4517 Washington Ave. Manchester..."),
-                            ],
-                          ),
-                          Text(
-                            DateFormat.jm().format(DateTime.now()).toString(),
-                          ),
+                          Text("New Montogomery"),
+                          Text("4517 Washington Ave. Manchester..."),
                         ],
                       ),
-                    ),
-                    const SizedBox(height: 30),
-                    Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Icon(Icons.location_on_rounded),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text("New Montogomery"),
-                              Text("4517 Washington Ave. Manchester..."),
-                            ],
-                          ),
-                          Text(
-                            DateFormat.jm().format(DateTime.now()).toString(),
-                          ),
-                        ],
+                      Text(
+                        DateFormat.jm().format(DateTime.now()).toString(),
                       ),
+                    ],
+                  ),
+                  const SizedBox(height: 30),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Icon(Icons.location_on_rounded),
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("New Montogomery"),
+                            Text("4517 Washington Ave. Manchester..."),
+                          ],
+                        ),
+                        Text(
+                          DateFormat.jm().format(DateTime.now()).toString(),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 30),
-                  ],
-                ),
+                  
+                  const SizedBox(height: 30),
+                ],
               ),
             ],
           ),

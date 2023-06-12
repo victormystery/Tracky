@@ -48,20 +48,16 @@ class _ServicesScreensState extends State<ServicesScreens> {
                           color: Color(0xfffd683d),
                         ),
                       ),
-                      Column(
+                      const Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text("MM09132005"),
                           SizedBox(height: 5),
                           Text("Processed at slot facility")
                         ],
                       ),
-                      Container(
-                        child: Text(DateFormat.yMEd()
-                            .format(DateTime.now())
-                            .toString()),
-                      ),
+                      Text(DateFormat.yMEd().format(DateTime.now()).toString()),
                     ],
                   ),
                 ),
@@ -85,20 +81,16 @@ class _ServicesScreensState extends State<ServicesScreens> {
                           color: Color(0xfffd683d),
                         ),
                       ),
-                      Column(
+                      const Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text("MM09132005"),
                           SizedBox(height: 5),
                           Text("Processed at slot facility")
                         ],
                       ),
-                      Container(
-                        child: Text(DateFormat.yMEd()
-                            .format(DateTime.now())
-                            .toString()),
-                      ),
+                      Text(DateFormat.yMEd().format(DateTime.now()).toString()),
                     ],
                   ),
                 ),
@@ -122,20 +114,19 @@ class _ServicesScreensState extends State<ServicesScreens> {
                           color: Color(0xfffd683d),
                         ),
                       ),
-                      Column(
+                      const Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text("MM09132005"),
                           SizedBox(height: 5),
                           Text("Processed at slot facility")
                         ],
                       ),
-                      Container(
-                        child: Text(DateFormat.yMEd()
+                       Text(DateFormat.yMEd()
                             .format(DateTime.now())
                             .toString()),
-                      ),
+                      
                     ],
                   ),
                 ),

@@ -1,14 +1,15 @@
+// ignore_for_file: use_build_context_synchronously, unused_local_variable, must_be_immutable
+
+import 'package:catchy/helper/services/auth_service.dart';
 import 'package:catchy/screen/auth/register.dart';
 import 'package:catchy/screen/main_feature/bottom_bar/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:pinput/pinput.dart';
 
-import '../../widget/widget.dart';
-
 class OtpScreen extends StatefulWidget {
-  const OtpScreen({super.key});
+  String phone;
+  OtpScreen({required this.phone, super.key});
 
   @override
   State<OtpScreen> createState() => _OtpScreenState();
@@ -17,29 +18,31 @@ class OtpScreen extends StatefulWidget {
 class _OtpScreenState extends State<OtpScreen> {
   FirebaseAuth auth = FirebaseAuth.instance;
   var code = "";
+
+  AuthService authService = AuthService();
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(
       width: 56,
       height: 56,
-      textStyle: TextStyle(
+      textStyle: const TextStyle(
           fontSize: 20,
           color: Color.fromRGBO(30, 60, 87, 1),
           fontWeight: FontWeight.w600),
       decoration: BoxDecoration(
-        border: Border.all(color: Color.fromRGBO(234, 239, 243, 1)),
+        border: Border.all(color: const Color.fromRGBO(234, 239, 243, 1)),
         borderRadius: BorderRadius.circular(20),
       ),
     );
 
     final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: Color.fromRGBO(114, 178, 238, 1)),
+      border: Border.all(color: const Color.fromRGBO(114, 178, 238, 1)),
       borderRadius: BorderRadius.circular(8),
     );
 
     final submittedPinTheme = defaultPinTheme.copyWith(
       decoration: defaultPinTheme.decoration?.copyWith(
-        color: Color.fromRGBO(234, 239, 243, 1),
+        color: const Color.fromRGBO(234, 239, 243, 1),
       ),
     );
     return Material(
@@ -61,9 +64,9 @@ class _OtpScreenState extends State<OtpScreen> {
                 child: const Icon(Icons.arrow_back_sharp),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Padding(
-              padding: const EdgeInsets.only(left: 15),
+              padding: EdgeInsets.only(left: 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -82,7 +85,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       ),
                       SizedBox(height: 3),
                       Text(
-                        " your number +01 65841542265",
+                        widget.phone,
                         style: TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w400),
                       )
@@ -91,7 +94,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Pinput(
               length: 6,
               onChanged: (value) {
@@ -99,21 +102,26 @@ class _OtpScreenState extends State<OtpScreen> {
               },
               showCursor: true,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             InkWell(
               onTap: () async {
-                PhoneAuthCredential credential = PhoneAuthProvider.credential(
-                    verificationId: Register.verify, smsCode: code);
+                try {
+                  PhoneAuthCredential credential = PhoneAuthProvider.credential(
+                      verificationId: Register.verify, smsCode: code);
 
-                // Sign the user in (or link) with the credential
-                await auth.signInWithCredential(credential);
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Home(),
-                    ));
+                  // Sign the user in (or link) with the credential
+                  await auth.signInWithCredential(credential);
+                  authService.storeToken(credential);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => Home(),
+                      ));
+                } catch (e) {
+                  return null;
+                }
               },
               child: Container(
                 width: double.infinity,
@@ -142,14 +150,25 @@ class _OtpScreenState extends State<OtpScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Didn\'t recieve the code?',
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(width: 7),
+                const SizedBox(width: 7),
                 InkWell(
-                  onTap: () {},
-                  child: Text(
+                  onTap: () async {
+                    await FirebaseAuth.instance.verifyPhoneNumber(
+                      phoneNumber: "+234" + widget.phone,
+                      verificationCompleted:
+                          (PhoneAuthCredential credential) {},
+                      verificationFailed: (FirebaseAuthException e) {},
+                      codeSent: (String verificationId, int? resendToken) {
+                        Register.verify = verificationId;
+                      },
+                      codeAutoRetrievalTimeout: (String verificationId) {},
+                    );
+                  },
+                  child: const Text(
                     "Resend",
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.w500),

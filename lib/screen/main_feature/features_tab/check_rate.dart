@@ -39,68 +39,76 @@ class _CheckRateState extends State<CheckRate> {
               ],
             ),
             const SizedBox(height: 30),
-            Row(
-              children: [
-                const Icon(CommunityMaterialIcons.record_circle_outline),
-                const SizedBox(width: 10),
-                SizedBox(
-                  width: 310,
-                  child: TextField(
-                    cursorColor: Colors.black,
-                    decoration: InputDecoration(
-                        fillColor: Colors.grey[250],
-                        filled: true,
-                        prefixIcon: const Icon(
-                          Icons.search,
-                          color: Colors.grey,
-                        ),
-                        suffixIcon: const Icon(
-                          Icons.gps_fixed_outlined,
-                          color: Colors.grey,
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.transparent)),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.transparent)),
-                        hintText: "Location for pickup"),
-                    keyboardType: TextInputType.text,
+            FittedBox(
+              child: Row(
+                children: [
+                  const Icon(CommunityMaterialIcons.record_circle_outline),
+                  const SizedBox(width: 10),
+                  SizedBox(
+                    width: 310,
+                    child: TextField(
+                      cursorColor: Colors.black,
+                      decoration: InputDecoration(
+                          fillColor: Colors.grey[250],
+                          filled: true,
+                          prefixIcon: const Icon(
+                            Icons.search,
+                            color: Colors.grey,
+                          ),
+                          suffixIcon: const Icon(
+                            Icons.gps_fixed_outlined,
+                            color: Colors.grey,
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12),
+                              borderSide:
+                                  const BorderSide(color: Colors.transparent)),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12),
+                              borderSide:
+                                  const BorderSide(color: Colors.transparent)),
+                          hintText: "Location for pickup"),
+                      keyboardType: TextInputType.text,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(height: 20),
-            Row(
-              children: [
-                const Icon(Icons.location_on_rounded),
-                const SizedBox(width: 10),
-                SizedBox(
-                  width: 310,
-                  child: TextField(
-                    cursorColor: Colors.black,
-                    decoration: InputDecoration(
-                        fillColor: Colors.grey[250],
-                        filled: true,
-                        prefixIcon: const Icon(
-                          Icons.search,
-                          color: Colors.grey,
-                        ),
-                        suffixIcon: const Icon(
-                          Icons.gps_fixed_outlined,
-                          color: Colors.grey,
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.transparent)),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.transparent)),
-                        hintText: "Package Destination"),
-                    keyboardType: TextInputType.text,
+            FittedBox(
+              child: Row(
+                children: [
+                  const Icon(Icons.location_on_rounded),
+                  const SizedBox(width: 10),
+                  SizedBox(
+                    width: 310,
+                    child: TextField(
+                      cursorColor: Colors.black,
+                      decoration: InputDecoration(
+                          fillColor: Colors.grey[250],
+                          filled: true,
+                          prefixIcon: const Icon(
+                            Icons.search,
+                            color: Colors.grey,
+                          ),
+                          suffixIcon: const Icon(
+                            Icons.gps_fixed_outlined,
+                            color: Colors.grey,
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12),
+                              borderSide:
+                                  const BorderSide(color: Colors.transparent)),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12),
+                              borderSide:
+                                  const BorderSide(color: Colors.transparent)),
+                          hintText: "Package Destination"),
+                      keyboardType: TextInputType.text,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(height: 40),
             Padding(
@@ -128,10 +136,12 @@ class _CheckRateState extends State<CheckRate> {
                         suffixText: "Kg",
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.transparent)),
+                            borderSide:
+                                const BorderSide(color: Colors.transparent)),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: Colors.transparent)),
+                            borderSide:
+                                const BorderSide(color: Colors.transparent)),
                         hintText: "0"),
                     keyboardType: TextInputType.number,
                   ),

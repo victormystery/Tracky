@@ -1,4 +1,7 @@
-import 'package:catchy/screen/auth/auth.dart';
+// ignore_for_file: use_build_context_synchronously
+
+
+import 'package:catchy/screen/main_feature/bottom_bar/home.dart';
 import 'package:flutter/material.dart';
 
 
@@ -21,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const Auth(),
+          builder: (context) => const Home(),
         ));
   }
 

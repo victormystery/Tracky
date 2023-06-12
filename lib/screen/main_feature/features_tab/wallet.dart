@@ -1,6 +1,8 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors
+
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+
 import 'package:intl/intl.dart';
 
 import '../home/top_up/top_up_page.dart';
@@ -57,9 +59,9 @@ class _WalletState extends State<Wallet> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           "My Balance",
                           style: TextStyle(
@@ -86,8 +88,7 @@ class _WalletState extends State<Wallet> {
                           },
                         ));
                       },
-                      child: Container(
-                        child: Row(
+                      child:  Row(
                           children: [
                             const Text(
                               "Top-Up",
@@ -110,7 +111,7 @@ class _WalletState extends State<Wallet> {
                           ],
                         ),
                       ),
-                    ),
+                    
                   ],
                 ),
               ),
@@ -151,10 +152,10 @@ class _WalletState extends State<Wallet> {
                       children: [
                         Image.asset("images/Mastercard Icon.png"),
                         const SizedBox(width: 15),
-                        Column(
+                        const Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text("Mastercard"),
                             SizedBox(height: 5),
                             Text("6789 0987 1234 **** "),
@@ -189,10 +190,10 @@ class _WalletState extends State<Wallet> {
                       children: [
                         Image.asset("images/Mastercard Icon.png"),
                         const SizedBox(width: 15),
-                        Column(
+                        const Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text("Mastercard"),
                             SizedBox(height: 5),
                             Text("6789 0987 1234 **** "),

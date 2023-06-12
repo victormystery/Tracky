@@ -1,3 +1,5 @@
+// ignore_for_file: use_full_hex_values_for_flutter_colors
+
 import 'package:catchy/screen/main_feature/home/service.dart';
 import 'package:catchy/screen/main_feature/home/track_order.dart';
 import 'package:community_material_icon/community_material_icon.dart';
@@ -26,8 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: const Color(0xfff1d272f),
               child: Column(
                 children: [
-                  Container(
-                    child: Column(
+                   Column(
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -86,9 +87,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Column(
+                              const Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
+                                children: [
                                   Text(
                                     "My Balance",
                                     style: TextStyle(
@@ -114,8 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     },
                                   ));
                                 },
-                                child: Container(
-                                  child: Row(
+                                child:  Row(
                                     children: [
                                       const Text(
                                         "Top-Up",
@@ -137,7 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                     ],
                                   ),
-                                ),
+                                
                               ),
                             ],
                           ),
@@ -197,7 +197,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                  )
+                  
                 ],
               ),
             ),

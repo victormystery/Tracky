@@ -40,8 +40,7 @@ class _HelpCenterState extends State<HelpCenter> {
                 ],
               ),
               const SizedBox(height: 20),
-              Container(
-                child: TextField(
+               TextField(
                   cursorColor: Colors.black,
                   decoration: InputDecoration(
                       fillColor: Colors.grey[250],
@@ -59,7 +58,7 @@ class _HelpCenterState extends State<HelpCenter> {
                       hintText: "Search For Faq"),
                   keyboardType: TextInputType.text,
                 ),
-              ),
+              
               const SizedBox(height: 20),
               Container(
                 padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
@@ -82,9 +81,9 @@ class _HelpCenterState extends State<HelpCenter> {
                               borderRadius: BorderRadius.circular(10),
                               border:
                                   Border.all(width: 1, color: Colors.black12)),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(
                                 CommunityMaterialIcons.package_variant_closed,
                                 color: Color(0xfffd683d),
@@ -101,9 +100,9 @@ class _HelpCenterState extends State<HelpCenter> {
                               borderRadius: BorderRadius.circular(10),
                               border:
                                   Border.all(width: 1, color: Colors.black12)),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(
                                 CommunityMaterialIcons.tablet_ipad,
                                 color: Color(0xfffd683d),
@@ -126,9 +125,9 @@ class _HelpCenterState extends State<HelpCenter> {
                               borderRadius: BorderRadius.circular(10),
                               border:
                                   Border.all(width: 1, color: Colors.black12)),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(
                                 CommunityMaterialIcons.package_variant_closed,
                                 color: Color(0xfffd683d),
@@ -145,9 +144,9 @@ class _HelpCenterState extends State<HelpCenter> {
                               borderRadius: BorderRadius.circular(10),
                               border:
                                   Border.all(width: 1, color: Colors.black12)),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Icon(
                                 CommunityMaterialIcons.ipod,
                                 color: Color(0xfffd683d),
@@ -176,9 +175,9 @@ class _HelpCenterState extends State<HelpCenter> {
                     const SizedBox(height: 10),
                     Container(
                       margin: const EdgeInsets.all(10),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children: [
                           Text("Why my track is not showing"),
                           Icon(Icons.add),
                         ],
@@ -187,9 +186,9 @@ class _HelpCenterState extends State<HelpCenter> {
                     const SizedBox(height: 20),
                     Container(
                       margin: const EdgeInsets.all(10),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children: [
                           Text("Why my track is not showing"),
                           Icon(Icons.add),
                         ],
@@ -198,9 +197,9 @@ class _HelpCenterState extends State<HelpCenter> {
                     const SizedBox(height: 20),
                     Container(
                       margin: const EdgeInsets.all(10),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children: [
                           Text("Why my track is not showing"),
                           Icon(Icons.add),
                         ],
@@ -209,9 +208,9 @@ class _HelpCenterState extends State<HelpCenter> {
                     const SizedBox(height: 20),
                     Container(
                       margin: const EdgeInsets.all(10),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children: [
                           Text("Why my track is not showing"),
                           Icon(Icons.add),
                         ],
@@ -221,8 +220,7 @@ class _HelpCenterState extends State<HelpCenter> {
                 ),
               ),
               const SizedBox(height: 20),
-              Container(
-                child: Column(
+               Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
@@ -264,23 +262,22 @@ class _HelpCenterState extends State<HelpCenter> {
                           color: Colors.black38,
                         ),
                       ),
-                      child: Row(
+                      child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
-                              child: const Icon(
+                             Icon(
                                 Icons.mail,
                                 color: Colors.black38,
                               ),
-                            ),
-                            const SizedBox(width: 5),
-                            const Text("Contact via Email")
+                            
+                            SizedBox(width: 5),
+                            Text("Contact via Email")
                           ]),
                     ),
                     const SizedBox(height: 10),
                   ],
                 ),
-              )
+              
             ],
           ),
         ),
